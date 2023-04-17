@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9a0a80f0ecb779f07f27d8750f83a7fded122aba38f94e0f6d07b5008a9da942
-size 990
+class SpectrumEnemies_Effect_Reinforce extends X2Effect config (SpectrumEnemies);
+
+	var config name EncounterID;
+	var config int 	SpawnTileOffset;
+
+	simulated protected function OnEffectAdded(const out EffectAppliedData ApplyEffectParameters, XComGameState_BaseObject kNewTargetState, XComGameState NewGameState, XComGameState_Effect NewEffectState)
+	{
+		local XComTacticalMissionManager MissionManager;
+		local ConfigurableEncounter Encounter;
+		local bool bFound;
+		local Vector RandomVector;
+		local XcomGameState GameState;
+		GameState = NewGameState;
+		RandomVector = VRand();
+
+		//EncounterID = 'OPNx3_Standard';
+		MissionManager = `TACTICALMISSIONMGR;
+		foreach MissionManager.ConfigurableEncounters(Encounter)
+		{
+			if( EncounterID == Encounter.EncounterID )
+			{
+				bFound = true;
+				break;
+			}
+		}
+		if( bFound )
+		{
+			class'XComGameState_AIReinforcementSpawner'.static.InitiateReinforcements(default.EncounterID, ,true,RandomVector,default.SpawnTileOffset,GameState);
+		}
+	}

@@ -1,3 +1,156 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cc823798d970ae0d5497ee42ad22f5c8094e25b48f47c06b93bdb776d46863eb
-size 6552
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <!--<Guid>4c60f6dc-192d-4bf2-a611-6a24ecedbf30</Guid>-->
+    <Name>SpectrumEnemiesWotc</Name>
+    <Description>A WOTC port of Spectrum: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=667025720]Yellow Enemies[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=725196351]Aegis Division[/url].
+
+It's a straight port getting it working in WOTC and fixing some graphical issues. All unit and item stats remain.
+
+I may try to give them a bit more distinction in their abilities so they aren't slightly different advent troops.
+
+tags=alien, war of the chosen</Description>
+    <SteamPublishID>0</SteamPublishID>
+    <AssemblyName>SpectrumEnemiesWotc</AssemblyName>
+    <RootNamespace>SpectrumEnemiesWotc</RootNamespace>
+    <ProjectGuid>{40b0da40-0ef3-4a3f-8396-880ea6b55812}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Config\" />
+    <Folder Include="Config\AdventMedKit\" />
+    <Folder Include="Config\ANCE\" />
+    <Folder Include="Localization\" />
+    <Folder Include="Content" />
+    <Folder Include="Src\" />
+    <Folder Include="Src\SpectrumEnemiesWotc\" />
+    <Folder Include="Src\SpectrumEnemiesWotc\Classes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\XComAegisRifle.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComAI.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\AdventMedKit\XComAI.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\ANCE\XComANCE_units.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComEncounterLists.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComGameCore.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComGameData.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComGameData_CharacterStats.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComMissions.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComSpectrumAbilities.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComSpectrumEnemies.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComSpectrumUtility.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComSpectrumWeapons.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComStrategyTuning.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ReadMe.txt" />
+    <Content Include="ModPreview.jpg" />
+    <Content Include="Config\XComEditor.ini" />
+    <Content Include="Config\XComEngine.ini" />
+    <Content Include="Config\XComGame.ini" />
+    <Content Include="Localization\XComGame.int" />
+    <Content Include="SpectrumEnemiesWotc.XComMod">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumEnemiesWotc\Classes\Abilities_Enemy.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumEnemiesWotc\Classes\Abilities_Utility.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumEnemiesWotc\Classes\Effect_ShieldRegen.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumEnemiesWotc\Classes\Items_New.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumEnemiesWotc\Classes\SpectrumEnemies_Ability.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumEnemiesWotc\Classes\SpectrumEnemies_Ability_Base.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumEnemiesWotc\Classes\SpectrumEnemies_Character.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumEnemiesWotc\Classes\SpectrumEnemies_Character_Aegis.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumEnemiesWotc\Classes\SpectrumEnemies_Character_Base.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumEnemiesWotc\Classes\SpectrumEnemies_Character_MEC.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumEnemiesWotc\Classes\SpectrumEnemies_Character_Psi.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumEnemiesWotc\Classes\SpectrumEnemies_Character_Pyro.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumEnemiesWotc\Classes\SpectrumEnemies_Character_Riot.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumEnemiesWotc\Classes\SpectrumEnemies_Character_Toxic.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumEnemiesWotc\Classes\SpectrumEnemies_Effect_CrackShot.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumEnemiesWotc\Classes\SpectrumEnemies_Effect_LowProfile.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumEnemiesWotc\Classes\SpectrumEnemies_Effect_Patience.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumEnemiesWotc\Classes\SpectrumEnemies_Effect_Reinforce.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumEnemiesWotc\Classes\SpectrumEnemies_GameState_CrackShot.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumEnemiesWotc\Classes\SpectrumEnemies_Weapon.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumEnemiesWotc\Classes\Weapons_Mod.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumEnemiesWotc\Classes\Weapons_New.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\SpectrumEnemiesWotc\Classes\X2DownloadableContentInfo_SpectrumEnemiesWotc.uc">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <SolutionRoot>$(MSBuildProjectDirectory)\..\</SolutionRoot>
+    <ScriptsDir>$(SolutionRoot).scripts\</ScriptsDir>
+    <BuildCommonRoot>$(ScriptsDir)X2ModBuildCommon\</BuildCommonRoot>
+  </PropertyGroup>
+  <Import Project="$(BuildCommonRoot)XCOM2.targets" />
+</Project>

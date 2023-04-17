@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4c1872254365839511f6e1b729033736e0772aed28377346a6c85dada5d95bc2
-size 345
+﻿A WOTC port of Spectrum: Yellow Enemies and Aegis Division.
+
+Updated scripts as necessary, fixed some texture problems, and tried to normalize some unit names.
+
+Balance of units and items are left as Yzaxtol created them.
+
+I may try and give them some abilities to give them a more distinct feel instead of just slightly different base units.

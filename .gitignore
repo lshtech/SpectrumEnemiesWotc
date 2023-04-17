@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:63d682cb7f320b918860121854129f80238878a684a0b83d44ab3b0473a805f1
-size 132
+*.v12.XCOM_suo
+BuildCache/
+Backup/
+SpectrumEnemiesWotc/Content/Spectrum_Enemy.upk.bak
+SpectrumEnemiesWotc/Content/Spectrum_Muton.upk

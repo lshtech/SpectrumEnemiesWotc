@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1d2387868c7bea87c71640640c8eaaf9d9137024a491e4428cb4ffa488cedb1b
-size 230
+{
+    "sfStandalone": [
+        "Spectrum_Captains",
+        "Spectrum_Lancers",
+        "Spectrum_MECs",
+        "Spectrum_ShieldBearers",
+        "Spectrum_Troopers", 
+        "Spectrum_Viper",
+        "Spectrum_Weapons"
+    ]
+}

@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b45fc32d1276dec3774495a7b0a66dd8019b5af96e92b30c2e20d33fcdfab054
-size 589
+class SpectrumEnemies_Effect_CrackShot extends X2Effect_Persistent;
+
+var name CrackShotThisTurnValue;
+
+function RegisterForEvents(XComGameState_Effect EffectGameState)
+{
+	local X2EventManager EventMgr;
+	local Object EffectObj;
+
+	EventMgr = `XEVENTMGR;
+
+	EffectObj = EffectGameState;
+
+	EventMgr.RegisterForEvent(EffectObj, 'UnitDied', SpectrumEnemies_GameState_CrackShot(EffectGameState).CrackShotCheck, ELD_OnStateSubmitted);
+}
+
+DefaultProperties
+{
+	CrackShotThisTurnValue = "CrackShotThisTurn"
+	GameStateEffectClass = class'SpectrumEnemies_GameState_CrackShot'
+	EffectName = "CrackShot"
+}

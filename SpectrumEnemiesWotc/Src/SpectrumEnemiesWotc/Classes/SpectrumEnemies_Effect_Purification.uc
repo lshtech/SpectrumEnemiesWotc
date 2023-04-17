@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5fe0aeba1093558d67294c29ad7d01b4152705ba369e6a583fd03b01a13cdb4b
-size 911
+class SpectrumEnemies_Effect_Purification extends X2Effect_Regeneration;
+
+function bool RegenerationTicked(X2Effect_Persistent PersistentEffect, const out EffectAppliedData ApplyEffectParameters, XComGameState_Effect kNewEffectState, XComGameState NewGameState, bool FirstApplication)
+{
+	local XComGameState_Unit TargetState;
+	
+	TargetState = XComGameState_Unit(`XCOMHISTORY.GetGameStateForObjectID(ApplyEffectParameters.TargetStateObjectRef.ObjectID));
+
+    if (TargetState.IsInWorldEffectTile(class'X2Effect_ApplyPoisonToWorld'.default.Class.Name))
+	{
+		return super.RegenerationTicked(PersistentEffect, ApplyEffectParameters, kNewEffectState, NewGameState, FirstApplication);
+	}
+
+	return false;
+}
+
+function bool IsEffectCurrentlyRelevant(XComGameState_Effect EffectGameState, XComGameState_Unit TargetUnit)
+{
+    return TargetUnit.IsInWorldEffectTile(class'X2Effect_ApplyPoisonToWorld'.default.Class.Name);
+}
